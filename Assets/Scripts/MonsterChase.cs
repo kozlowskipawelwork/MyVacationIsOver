@@ -10,9 +10,13 @@ public class MonsterChase : MonoBehaviour
     public int monsterSpeed;
 
     void FixedUpdate(){
-        monsterRigid.velocity = playerTransform.forward * monsterSpeed * Time.deltaTime;
+        monsterRigid.velocity = monsterTransform.forward * monsterSpeed * Time.deltaTime;
     }
     void Update(){
-        monsterTransform.LookAt(playerTransform);
-    }
+    Quaternion forwardLean = Quaternion.Euler(30, 0, 0);
+    Quaternion targetRotation = Quaternion.LookRotation(playerTransform.position - monsterTransform.position) * forwardLean;
+    monsterTransform.rotation = Quaternion.Slerp(monsterTransform.rotation, targetRotation, Time.deltaTime);
+}
+
+
 }   

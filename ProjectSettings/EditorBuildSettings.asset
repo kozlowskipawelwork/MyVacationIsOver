@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ghostscare.unity
+    guid: a6578434abded3305b2272169701611c
+  - enabled: 1
+    path: Assets/Scenes/angelscare1.unity
+    guid: fa864971d6426da8b99dfb01bd430995
+  - enabled: 1
+    path: Assets/Scenes/angelscare2.unity
+    guid: 145efc00825537599b57084dfe0b783c
+  - enabled: 1
+    path: Assets/Scenes/angelscare3.unity
+    guid: e62aad164942b9d028e4196302384be4
   m_configObjects: {}
