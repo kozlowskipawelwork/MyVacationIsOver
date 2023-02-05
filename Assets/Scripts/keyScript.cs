@@ -5,6 +5,7 @@ using UnityEngine;
 public class keyScript : MonoBehaviour
 {
     public GameObject inticon, key;
+	public AudioSource pickup;
 	
 	void OnTriggerStay(Collider other){
 		if(other.CompareTag("MainCamera")){
@@ -13,6 +14,7 @@ public class keyScript : MonoBehaviour
 				key.SetActive(false);
 				Door.keyfound = true;
 				inticon.SetActive(false);
+				pickup.Play();
 			}
 		}
 	}
